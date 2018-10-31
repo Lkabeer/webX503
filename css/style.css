@@ -1,0 +1,38 @@
+@font-face {
+  font-family: fontX;
+  src: url("../assets/KaushanScriptX.ttf");
+}
+* {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: fontX;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateX 3s linear infinite;
+}
+
+@keyframes animateX {
+  from {
+    background-position: -100vw;
+  }
+  to {
+    background-position: 100vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
