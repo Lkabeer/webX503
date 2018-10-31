@@ -1,27 +1,55 @@
+@font-face {
+    font-family: fontX;
+    src: url("../assets/KaushanScriptX.ttf");
+}
+
 * {
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 1s ease-in-out 0s;
+    transition: all 1s ease-in-out 0s;
 }
 
 body {
     margin: 0;
     height: 100vh;
-    font: 10px/10px sans-serif;
-    text-align: justify;
-    overflow-y: hidden;
-    background-color: #262626;
+    background-color: #000;
+    font-family: fontX;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-p {
-    background-image: url('../assets/batman.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    a {
+        position: relative;
+        width: 200px;
+        height: 60px;
+        
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 2em;
+        line-height: 60px;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        svg,
+        svg rect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+        }
+
+        svg rect {
+            stroke-width: 4;
+            stroke: red;
+            stroke-dasharray: 60 200;
+            stroke-dashoffset: 320;
+        }
+
+        &:hover svg rect {
+            stroke: #ff0;
+            stroke-dasharray: 200 60;
+            stroke-dashoffset: 0;
+        }
+    }
 }
